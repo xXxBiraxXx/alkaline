@@ -1,0 +1,17 @@
+{
+  "name": "alkaline",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build --watch",
+    "hot-reload": "vite",
+    "preview": "vite preview",
+    "css": "npx tailwindcss -i ./src/css/index.css -o ./src/css/index-min.css --watch"
+  },
+  "dependencies": {
+    "swiper": "^8.4.5",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "vite": "^2.9.13"
+  }
+}

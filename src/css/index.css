@@ -1,0 +1,111 @@
+@import "tailwind/tailwind.css";
+
+:root {
+    --primary: rgba(0,159,255,1);
+    --primary-50: rgba(0,159,255,0.5);
+    --primary-25: rgba(0,159,255,0.25);
+
+    --success: #89d562;
+    --warn: #d0a54e;
+    --destructive: #c32c2c;
+
+    --light: rgba(251,251,251,1);
+    --light-75: rgba(251,251,251,0.75);
+    --light-50: rgba(251,251,251,0.5);
+    --light-25: rgba(251,251,251,0.25);
+
+    --light-gray: rgb(243, 243, 243,1);
+    --light-gray-75: rgba(243,243,243,0.75);
+    --light-gray-50: rgba(243,243,243,0.5);
+    --light-gray-25: rgba(243,243,243,0.25);
+
+    --gray: rgba(200,200,200,1);
+    --gray-75: rgba(200,200,200,0.75);
+    --gray-50: rgba(200,200,200,0.5);
+    --gray-25: rgba(200,200,200,0.25);
+
+    --dark-gray: rgba(150,150,150,1);
+    --dark-gray-75: rgba(150,150,150,0.75);
+    --dark-gray-50: rgba(150,150,150,0.5);
+    --dark-gray-25: rgba(150,150,150,0.25);
+
+    --dark: rgba(47,47,47,1);
+    --dark-75: rgba(47,47,47,0.75);
+    --dark-50: rgba(47,47,47,0.5);
+    --dark-25: rgba(47,47,47,0.25);
+
+    --padding-bottom-safe-area: env(safe-area-inset-bottom);
+    --padding-top-safe-area: env(safe-area-inset-top);
+
+    font-family: "Roboto", serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.pt-safe-area {
+    padding-top: calc(env(safe-area-inset-top) + 1rem);
+}
+
+.pb-safe-area {
+    padding-bottom: calc(env(safe-area-inset-bottom));
+}
+
+*,*::before, *::after {
+    overscroll-behavior: none;
+    box-sizing: border-box;
+    -webkit-backface-visibility:  hidden;
+    -webkit-tap-highlight-color:  transparent;
+}
+
+*:not(input):not(textarea):not(.selectable) {
+    user-select: none;
+}
+
+.separator-top {
+    border-top: 1px solid var(--gray-25);
+}
+
+.separator-bottom {
+    border-bottom: 1px solid var(--gray-25);
+}
+
+.center {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.center-x {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.center-y {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+.defaultProfileImage {
+    border-radius:  0px;
+    padding: 0.625rem;
+}
+
+
+/* swipper */
+.swiper-pagination-bullet {
+    background-color: var(--dark) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary) !important;
+}
